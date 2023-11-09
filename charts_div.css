@@ -1,0 +1,6 @@
+#chart_div {
+    width: 800px; /* Increase width as needed */
+    height: 400px; /* Increase height as needed */
+    margin-left: 10%; /* Adjust this value to move the gauge to the left */
+  }
+  

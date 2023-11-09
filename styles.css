@@ -1,0 +1,33 @@
+#dashboard {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.confetti {
+    position: fixed;
+    z-index: 9999;
+    top: -10px;
+    pointer-events: none;
+  }
+  
+  .confetti-piece {
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    position: absolute;
+    opacity: 1;
+    animation: fall linear forwards;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -10px;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  
+/* Add more styles as per your design requirement */
