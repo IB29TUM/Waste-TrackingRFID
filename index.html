@@ -33,7 +33,7 @@
   input[type="file"] {
     margin-top: 20px;
   }
-  #siteLogo, #siteLogo1 {
+  #siteLogo, #siteLogo1,#siteLogo2 {
     position: absolute;
     top: 10px;
     height: 100px;
@@ -45,12 +45,37 @@
   #siteLogo1 {
     left: 100px; /* Adjust based on the actual width of your first logo */
   }
+  #siteLogo2 {
+    left: 1700px; /* Adjust based on the actual width of your first logo */
+  }
   /* Adjust the size and position of the gauge chart */
   #chart_div {
     width: 500px; /* Increase the width as needed */
     height: 800px; /* Increase the height as needed */
-    margin-left: 45%; /* Move to the left side of the screen */
+    margin-left: 46%; /* Move to the left side of the screen */
   }
+  #buttonsContainer button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px #999;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#buttonsContainer button:hover {
+    background-color: #45a049;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 </style>
 <!-- Load the Google Charts library -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -59,6 +84,7 @@
 <body>
     <img src="logo.png" id="siteLogo" alt="EcoRedeem Logo">
     <img src="logo2.png" id="siteLogo1" alt="Additional Logo">
+    <img src="sick.png" id="siteLogo2" alt="Additional logo2">
     <h1>EcoRedeem</h1>
     <input type="file" id="csvFileInput" accept=".csv">
     <table id="csvTable">
@@ -66,8 +92,14 @@
     </table>
     
     <div id="recycleMessage" style="text-align: center; font-size: 20px;"></div>
+    <div id="buttonsContainer" style="text-align: center; margin-top: 20px;">
+      <button id="sendDataButton">Send your data</button>
+      <button id="redeemPointsButton">Redeem your points</button>
+  </div>
     <!-- Container for the gauge chart -->
     <div id="chart_div"></div>
+    
+  
     <div id="partyPopperEffect" >
         <!-- The party popper effect will be displayed here -->
       </div>
