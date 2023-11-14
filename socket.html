@@ -3,12 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socket Data Display</title>
+    <title>EcoRedeem</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: relative;
+            height: 70px; /* Set the height to the logo height */
+            padding-left: 10px; /* Padding to not stick to the edge */
+        }
+        .header img {
+            height: 100px;
+            display: inline-block; /* Align images in a line */
+        }
+        #siteLogo2 {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Align to the right */
+            height: 100px;
+        }
+        .title {
+            text-align: center;
+            margin-top: 10px; /* Adjusted to account for header height */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Received Data</h1>
-    <div id="dataDisplay"></div>
-
+    <div class="header">
+        <img src="logo.png" id="siteLogo" alt="EcoRedeem Logo">
+        <img src="logo2.png" id="siteLogo1" alt="Additional Logo">
+        <img src="sick.png" id="siteLogo2" alt="Additional logo2">
+    </div>
+    <h1 class="title">EcoRedeem</h1>
+    <div id="content">
+        <table id="dataDisplay">
+            <tr>
+                <th>RFID</th>
+                <th>ProductType</th>
+                <th>Recyclable</th>
+            </tr>
+            <!-- Table data should be inserted here -->
+        </table>
+    </div>
     <script src="socketlogic.js"></script>
 </body>
 </html>
