@@ -15,6 +15,13 @@
             height: 70px; /* Set the height to the logo height */
             padding-left: 10px; /* Padding to not stick to the edge */
         }
+        .header img.center {
+            position: absolute;
+            top: 10px;
+            right: 40%; /* Align to the right */
+            height: 100px;
+}
+
         .header img {
             height: 100px;
             display: inline-block; /* Align images in a line */
@@ -40,18 +47,43 @@
             padding: 8px;
         }
         th {
-            background-color: #007bff;
+            background-color: #0ca416c3;
             color: white;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        /* ... existing CSS above ... */
+
+/* Style for the redeem button */
+#redeemButton {
+    background-color: #0ca416c3; /* Green color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    margin: 20px 0; /* Margin above and below the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: block; /* Block display to occupy its own line */
+    width: max-content; /* Set width according to content */
+    margin-left: auto; /* Align to the right */
+    margin-right: auto; /* Align to the right */
+}
+
+/* Hover effect for the redeem button */
+#redeemButton:hover {
+    background-color: #0a9b0b; /* A darker green color for hover effect */
+}
+
+/* ... existing CSS below ... */
+
     </style>
 </head>
 <body>
     <div class="header">
         <img src="logo.png" id="siteLogo" alt="EcoRedeem Logo">
         <img src="logo2.png" id="siteLogo1" alt="Additional Logo">
+        <img src="logo3.jpeg" id="titleLogo" alt="EcoRedeem Title Logo" class="center">
         <img src="sick.png" id="siteLogo2" alt="Additional logo2">
     </div>
     <h1 class="title">EcoRedeem</h1>
@@ -62,8 +94,9 @@
                 <th>ProductType</th>
                 <th>Recyclable</th>
             </tr>
-            <!-- Table data should be inserted here -->
+        
         </table>
+        <button id="redeemButton">Download your Data</button>
     </div>
     <script src="socketlogic.js"></script>
 </body>
